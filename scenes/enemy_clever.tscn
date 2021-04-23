@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/alienvert.png" type="Texture" id=2]
+[ext_resource path="res://assets/alienrouge.png" type="Texture" id=3]
+[ext_resource path="res://assets/alienbleu.png" type="Texture" id=4]
+[ext_resource path="res://scripts/enemy_clever.gd" type="Script" id=5]
+
+[sub_resource type="AnimatedTexture" id=1]
+flags = 4
+frames = 3
+pause = true
+frame_0/texture = ExtResource( 4 )
+frame_1/texture = ExtResource( 3 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 2 )
+frame_2/delay_sec = 0.0
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="enemy_clever" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
+velocity = Vector2( 50, 50 )
+
+[node name="sprite" parent="." index="0"]
+scale = Vector2( 0.4, 0.4 )
+texture = SubResource( 1 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource( 2 )
+
+[node name="cannon" type="Position2D" parent="." index="2"]
+position = Vector2( 0, 11 )

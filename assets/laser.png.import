@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vaisseau_tir_1.jpg-d378ebb37a83ee4db352e5b3e6e5d6e0.stex"
+path="res://.import/laser.png-af9ca9427a51d96a36a733a4aa4be8b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vaisseau_tir_1.jpg"
-dest_files=[ "res://.import/vaisseau_tir_1.jpg-d378ebb37a83ee4db352e5b3e6e5d6e0.stex" ]
+source_file="res://assets/laser.png"
+dest_files=[ "res://.import/laser.png-af9ca9427a51d96a36a733a4aa4be8b2.stex" ]
 
 [params]
 

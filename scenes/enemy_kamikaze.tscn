@@ -7,6 +7,7 @@
 radius = 19.2444
 
 [node name="enemy_kamikaze" instance=ExtResource( 1 )]
+armor = 4
 velocity = Vector2( 0, 250 )
 
 [node name="sprite" parent="." index="0"]

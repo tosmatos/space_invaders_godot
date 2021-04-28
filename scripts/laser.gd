@@ -3,7 +3,7 @@
 extends Area2D
 
 export var velocity = Vector2()
-
+const scn_flare = preload("res://scenes/flare.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,4 +18,7 @@ func _ready():
 func _process(delta):
 	translate(velocity * delta)
 
-
+func create_flare():
+	var flare = scn_flare.instance()
+	flare.set_position(get_global_position())
+	call("add_child", flare)

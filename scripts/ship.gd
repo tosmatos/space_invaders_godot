@@ -4,10 +4,12 @@ extends Area2D
 
 const scn_flare = preload("res://scenes/flare.tscn")
 const scn_laser = preload("res://scenes/laser_ship.tscn")
+var armor = 4 setget set_armor
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
+	add_to_group("ship")
 	
 	yield(get_tree().create_timer(0.5), "timeout")
 	shoot()
@@ -48,3 +50,7 @@ func shoot():
 		create_flare(pos_flare_right)
 		
 		yield(get_tree().create_timer(0.25), "timeout")
+
+func set_armor(new_value):
+	armor = new_value
+	if armor <= 0: queue_free()
